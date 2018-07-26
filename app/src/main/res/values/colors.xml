@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorTextTitle">#7e7e7e</color>
+    <color name="colorSeparador">#EFEEED</color>
+    <color name="colorRectangleGreenLight">#74da61</color>
+    <color name="colorRectangleGreenDark">#4ac16c</color>
+    <color name="colorRectangleYellow">#ffc011</color>
+    <color name="colorRectangleOrange">#ff742c</color>
+    <color name="colorRectangleRed">#ff3634</color>
+    <color name="colorBtn">#da0101</color>
+
+
+</resources>

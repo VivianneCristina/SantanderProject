@@ -1,4 +1,4 @@
-package com.viviannecristina.santanderproject.utils;
+package com.viviannecristina.santanderproject.config;
 
 import com.viviannecristina.santanderproject.R;
 

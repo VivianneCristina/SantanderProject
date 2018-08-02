@@ -16,7 +16,7 @@
 
 
     <include
-        android:id="@+id/include1"
+        android:id="@+id/include_title"
         layout="@layout/toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -27,7 +27,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/iv_share"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -43,12 +43,13 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="title"
-        android:textSize="22dp"
+        android:text="Fundos de Investimento"
+        android:fontFamily="@font/dinpro_medium"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include1" />
+        app:layout_constraintTop_toBottomOf="@+id/include_title" />
 
     <TextView
         android:id="@+id/tv_fund_name"
@@ -57,17 +58,18 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="fundName"
+        android:text="Vinci Valorem FI Multimercado"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="#7e7e7e"
         android:textSize="30sp"
+        android:fontFamily="@font/dinpro_medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
     <View
-        android:id="@+id/View"
+        android:id="@+id/separador_view1"
         android:layout_width="315dp"
         android:layout_height="5dp"
         android:background="@color/colorSeparador"
@@ -84,11 +86,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="What Is?"
+        android:text="O que é?"
+        android:fontFamily="@font/dinpro_regular"
+        android:textColor="#7e7e7e"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/View" />
+        app:layout_constraintTop_toBottomOf="@+id/separador_view1" />
 
     <TextView
         android:id="@+id/tv_definition"
@@ -98,8 +103,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Definition"
+        android:fontFamily="@font/dinpro_regular"
+        android:textColor="#7e7e7e"
+        android:textSize="16sp"
         android:textAlignment="center"
-        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_what_is" />
@@ -112,6 +119,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="48dp"
         android:text="Grau de risco do investimento"
+        android:fontFamily="@font/dinpro_regular"
+        android:textColor="#7e7e7e"
+        android:textSize="16sp"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
@@ -121,16 +131,18 @@
 
     <LinearLayout
         android:id="@+id/layout_risk"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="32dp"
+        android:layout_width="327dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="356dp"
-        tools:ignore="MissingConstraints">
+        tools:layout_editor_absoluteY="356dp">
 
         <include
-            android:id="@+id/include2"
-            android:layout_width="wrap_content"
+            android:id="@+id/include_risk"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:layout="@layout/risk" />
@@ -145,6 +157,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:text="Mais informações sobre o investimento"
+        android:fontFamily="@font/dinpro_regular"
+        android:textColor="#7e7e7e"
         android:textSize="16sp"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -156,15 +170,21 @@
         android:id="@+id/tv_fundo"
         android:layout_width="wrap_content"
         android:layout_height="21dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/dinpro_regular"
         android:text="Fundo"
+        android:textColor="#7e7e7e"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/Separador_view2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.677"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/tv_cdi"
-        app:layout_constraintTop_toBottomOf="@id/tv_info_title" />
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_info_title"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tv_cdi"
@@ -172,46 +192,39 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="80dp"
+        android:fontFamily="@font/dinpro_regular"
         android:text="CDI"
+        android:textColor="#7e7e7e"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.896"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_risk"/>
+        tools:layout_editor_absoluteY="475dp" />
 
     <View
-        android:id="@+id/View2"
+        android:id="@+id/Separador_view2"
         android:layout_width="315dp"
         android:layout_height="5dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:background="@color/colorSeparador"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="656dp" />
-
-    <Button
-        android:id="@+id/invest_btn"
-        android:layout_width="243dp"
-        android:layout_height="39dp"
-        android:background="@drawable/fundo"
-        android:text="Investir"
-        android:textColor="#ffff"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="1163dp" />
+        tools:layout_editor_absoluteY="656dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/tv_taxa_adm"
+        android:id="@+id/tv_adm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:text="Taxa de administração"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="695dp" />
+        tools:layout_editor_absoluteY="695dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_taxa_adm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -219,19 +232,21 @@
         android:text="0.50%"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.887"
-        app:layout_constraintStart_toEndOf="@+id/tv_taxa_adm"
-        tools:layout_editor_absoluteY="696dp" />
+        app:layout_constraintStart_toEndOf="@+id/tv_adm"
+        tools:layout_editor_absoluteY="696dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tv_application"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
         android:text="Aplicação inicial"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="734dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="731dp" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tv_value_application"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -239,19 +254,20 @@
         android:text="R$ 10.000,00"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.891"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/tv_application"
         tools:layout_editor_absoluteY="734dp" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tv_move_min"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
         android:text="Movimentação mínima"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="772dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="770dp" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/tv_value_move"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -259,20 +275,20 @@
         android:text="R$ 1.000,00"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.861"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/tv_move_min"
         tools:layout_editor_absoluteY="774dp" />
 
     <TextView
         android:id="@+id/tv_month"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="56dp"
         android:text="No mês"
-        app:layout_constraintTop_toBottomOf="@+id/tv_fundo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_info_title"
         tools:layout_editor_absoluteX="29dp" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/tv_fund_month"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -285,16 +301,16 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_fundo" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/tv_cdi_month"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:text="0,3%"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.641"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toEndOf="@+id/tv_fund_month"
         app:layout_constraintTop_toBottomOf="@+id/tv_cdi" />
 
     <TextView
@@ -307,16 +323,19 @@
         tools:layout_editor_absoluteX="29dp" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/tv_fund_year"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="104dp"
         android:text="13,01%"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toEndOf="@+id/tv_year"
-        tools:layout_editor_absoluteY="559dp" />
+        tools:layout_editor_absoluteY="556dp" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/tv_cdi_year"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -325,74 +344,91 @@
         android:text="12,08%"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.636"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintStart_toEndOf="@+id/tv_fund_year"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cdi_month" />
 
     <TextView
         android:id="@+id/tv_months"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
         android:text="12 meses"
-        app:layout_constraintTop_toBottomOf="@+id/tv_year"
-        tools:layout_editor_absoluteX="29dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_year" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/tv_fund_months"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="100dp"
         android:text="17,9%"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
         app:layout_constraintStart_toEndOf="@+id/tv_months"
-        tools:layout_editor_absoluteY="601dp" />
+        tools:layout_editor_absoluteY="616dp" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/tv_cdi_months"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="36dp"
         android:text="17,6%"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.653"
-        app:layout_constraintStart_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintHorizontal_bias="0.628"
+        app:layout_constraintStart_toEndOf="@+id/tv_fund_months"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cdi_year" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/tv_balance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
         android:text="Saldo minimo"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="811dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="807dp" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/tv_value_balance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:text="R$ 5.000,00"
-        tools:layout_editor_absoluteX="285dp"
-        tools:layout_editor_absoluteY="814dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.915"
+        app:layout_constraintStart_toEndOf="@+id/tv_balance"
+        tools:layout_editor_absoluteY="809dp" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/tv_redemption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:text="Resgate (valor bruto)"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="850dp" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="D+0"
-        tools:layout_editor_absoluteX="331dp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_redemption_final"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="848dp" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/tv_redemption_final"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="D+0"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="844dp" />
+
+    <TextView
+        android:id="@+id/tv_quota"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cota (valor bruto)"
@@ -400,7 +436,7 @@
         tools:layout_editor_absoluteY="889dp" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/tv_quota_final"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="D+1"
@@ -408,7 +444,7 @@
         tools:layout_editor_absoluteY="886dp" />
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/tv_payment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pagamento (valor bruto)"
@@ -416,7 +452,7 @@
         tools:layout_editor_absoluteY="927dp" />
 
     <TextView
-        android:id="@+id/textView23"
+        android:id="@+id/tv_payment_final"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="D+2"
@@ -424,7 +460,7 @@
         tools:layout_editor_absoluteY="927dp" />
 
     <TextView
-        android:id="@+id/textView24"
+        android:id="@+id/tv_essential"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Essenciais"
@@ -432,7 +468,7 @@
         tools:layout_editor_absoluteY="965dp" />
 
     <TextView
-        android:id="@+id/textView25"
+        android:id="@+id/tv_performance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Desempenho"
@@ -440,7 +476,7 @@
         tools:layout_editor_absoluteY="1006dp" />
 
     <TextView
-        android:id="@+id/textView26"
+        android:id="@+id/tv_complementary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Complementares"
@@ -448,7 +484,7 @@
         tools:layout_editor_absoluteY="1044dp" />
 
     <TextView
-        android:id="@+id/textView27"
+        android:id="@+id/tv_regulation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Regulamento"
@@ -456,15 +492,19 @@
         tools:layout_editor_absoluteY="1080dp" />
 
     <TextView
-        android:id="@+id/textView28"
+        android:id="@+id/tv_accession"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:text="Adesão"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="1118dp" />
+        app:layout_constraintEnd_toStartOf="@+id/tv_down_05"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="1117dp" />
 
     <TextView
-        android:id="@+id/down_01"
+        android:id="@+id/tv_down_01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Baixar"
@@ -472,7 +512,7 @@
         tools:layout_editor_absoluteY="965dp" />
 
     <TextView
-        android:id="@+id/textView30"
+        android:id="@+id/tv_down_02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Baixar"
@@ -480,7 +520,7 @@
         tools:layout_editor_absoluteY="1006dp" />
 
     <TextView
-        android:id="@+id/textView31"
+        android:id="@+id/tv_down_03"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Baixar"
@@ -488,7 +528,7 @@
         tools:layout_editor_absoluteY="1044dp" />
 
     <TextView
-        android:id="@+id/textView32"
+        android:id="@+id/tv_down_04"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Baixar"
@@ -496,28 +536,29 @@
         tools:layout_editor_absoluteY="1084dp" />
 
     <TextView
-        android:id="@+id/textView33"
+        android:id="@+id/tv_down_05"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:text="Baixar"
-        tools:layout_editor_absoluteX="320dp"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="1118dp" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/shape_normal"
-        tools:layout_editor_absoluteX="298dp"
-        tools:layout_editor_absoluteY="982dp" />
+    <Button
+        android:id="@+id/invest_btn"
+        android:layout_width="243dp"
+        android:layout_height="39dp"
+        android:background="@drawable/fundo"
+        android:fontFamily="@font/dinpro_regular"
+        android:text="Investir"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="1196dp" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/shape_normal_1"
-        tools:layout_editor_absoluteX="301dp"
-        tools:layout_editor_absoluteY="965dp" />
 
 </android.support.constraint.ConstraintLayout>
 

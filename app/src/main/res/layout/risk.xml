@@ -41,7 +41,7 @@
             android:background="@drawable/group_risk" />
 
         <View
-            android:id="@+id/View2"
+            android:id="@+id/Separador_view2"
             android:layout_width="59dp"
             android:layout_height="6dp"
             android:background="@color/colorRectangleGreenDark" />

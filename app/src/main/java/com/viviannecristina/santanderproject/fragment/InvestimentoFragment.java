@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.viviannecristina.santanderproject.R;
 import com.viviannecristina.santanderproject.domain.SubScreen;
@@ -29,12 +28,9 @@ public class InvestimentoFragment extends Fragment {
 
     private Toolbar toolbar;
 
-    private TextView title,fundName, whatIs, definition, riskTitle, infoTitle;
+    private TextView title, fundName, whatIs, definition, riskTitle, infoTitle;
     private Button button;
-
-    public InvestimentoFragment() {
-        // Required empty public constructor
-    }
+    private View view1, view2, view3, view4, view5;
 
 
     @Override
@@ -50,6 +46,11 @@ public class InvestimentoFragment extends Fragment {
         definition = view.findViewById(R.id.tv_definition);
         riskTitle = view.findViewById(R.id.tv_risk_title);
         infoTitle = view.findViewById(R.id.tv_info_title);
+        view1 = view.findViewById(R.id.View1);
+        view2 = view.findViewById(R.id.Separador_view2);
+        view3 = view.findViewById(R.id.View3);
+        view4 = view.findViewById(R.id.View4);
+        view5 = view.findViewById(R.id.View5);
 
 
 
@@ -59,7 +60,6 @@ public class InvestimentoFragment extends Fragment {
 
         init();
 
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_investimento, container, false);
 
     }
@@ -72,6 +72,7 @@ public class InvestimentoFragment extends Fragment {
         subScreen.enqueue(new Callback<SubScreen>() {
             @Override
             public void onResponse(Call<SubScreen> call, Response<SubScreen> response) {
+
                 SubScreen subScreenReturn = response.body();
 
                 title.setText(subScreenReturn.getScreen().getTitle());
@@ -80,6 +81,34 @@ public class InvestimentoFragment extends Fragment {
                 definition.setText(subScreenReturn.getScreen().getDefinition());
                 riskTitle.setText(subScreenReturn.getScreen().getRiskTitle());
                 infoTitle.setText(subScreenReturn.getScreen().getTitle());
+
+                switch(subScreenReturn.getScreen().getRisk()){
+                    case LOW:
+                        ViewGroup.LayoutParams layoutParams = view1.getLayoutParams();
+                        layoutParams.height = 500;
+                        view1.setLayoutParams(layoutParams);
+                        break;
+                    case LOW_MEDIUM:
+                        ViewGroup.LayoutParams layoutParams2 = view2.getLayoutParams();
+                        layoutParams2.height = 500;
+                        view2.setLayoutParams(layoutParams2);
+                        break;
+                    case MEDIUM:
+                        ViewGroup.LayoutParams layoutParams3 = view3.getLayoutParams();
+                        layoutParams3.height = 500;
+                        view3.setLayoutParams(layoutParams3);
+                        break;
+                    case MEDIUM_HIGH:
+                        ViewGroup.LayoutParams layoutParams4 = view4.getLayoutParams();
+                        layoutParams4.height = 500;
+                        view4.setLayoutParams(layoutParams4);
+                        break;
+                    case HIGH:
+                        ViewGroup.LayoutParams layoutParams5 = view5.getLayoutParams();
+                        layoutParams5.height = 500;
+                        view5.setLayoutParams(layoutParams5);
+                        break;
+                }
             }
 
             @Override

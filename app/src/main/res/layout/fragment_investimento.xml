@@ -5,14 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".fragment.InvestimentoFragment">
 
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="300dp">
+    android:layout_height="wrap_content"
+    android:paddingBottom="30dp">
 
 
     <include
@@ -34,7 +34,7 @@
         android:background="@drawable/share_normal"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="340dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"/>
 
     <TextView
         android:id="@+id/tv_title"
@@ -138,7 +138,8 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="356dp">
+        tools:layout_editor_absoluteY="356dp"
+        tools:ignore="MissingConstraints">
 
         <include
             android:id="@+id/include_risk"
@@ -170,7 +171,6 @@
         android:id="@+id/tv_fundo"
         android:layout_width="wrap_content"
         android:layout_height="21dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
@@ -178,28 +178,23 @@
         android:text="Fundo"
         android:textColor="#7e7e7e"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/Separador_view2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/tv_cdi"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintEnd_toStartOf="@+id/tv_cdi"
+        app:layout_constraintHorizontal_bias="0.646"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_info_title"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@id/tv_info_title" />
 
     <TextView
         android:id="@+id/tv_cdi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="35dp"
         android:fontFamily="@font/dinpro_regular"
         android:text="CDI"
         android:textColor="#7e7e7e"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.896"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="475dp" />
+        tools:layout_editor_absoluteY="475dp"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/Separador_view2"
@@ -211,6 +206,104 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="656dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="No mês"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="514dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_fund_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="0,3%"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintStart_toEndOf="@+id/tv_month"
+        tools:layout_editor_absoluteY="514dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_cdi_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:text="0,3%"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="514dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="No Ano"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="555dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_fund_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="96dp"
+        android:text="13,01%"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toEndOf="@+id/tv_year"
+        tools:layout_editor_absoluteY="555dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_cdi_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:text="12,08%"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="559dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_months"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="12 meses"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="596dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_fund_months"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="17,9%"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.367"
+        app:layout_constraintStart_toEndOf="@+id/tv_months"
+        tools:layout_editor_absoluteY="596dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_cdi_months"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:text="17,6%"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="596dp"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -227,35 +320,32 @@
         android:id="@+id/tv_taxa_adm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="28dp"
         android:text="0.50%"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.887"
-        app:layout_constraintStart_toEndOf="@+id/tv_adm"
-        tools:layout_editor_absoluteY="696dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="695dp" />
 
     <TextView
         android:id="@+id/tv_application"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
+        android:layout_marginEnd="8dp"
         android:text="Aplicação inicial"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="731dp" />
+        tools:layout_editor_absoluteY="731dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_value_application"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="28dp"
         android:text="R$ 10.000,00"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.891"
-        app:layout_constraintStart_toEndOf="@+id/tv_application"
-        tools:layout_editor_absoluteY="734dp" />
+        tools:layout_editor_absoluteY="734dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_move_min"
@@ -264,126 +354,19 @@
         android:layout_marginStart="28dp"
         android:text="Movimentação mínima"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="770dp" />
+        tools:layout_editor_absoluteY="770dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_value_move"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="28dp"
         android:text="R$ 1.000,00"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.861"
-        app:layout_constraintStart_toEndOf="@+id/tv_move_min"
-        tools:layout_editor_absoluteY="774dp" />
+        tools:layout_editor_absoluteY="774dp"
+        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/tv_month"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="No mês"
-        app:layout_constraintTop_toBottomOf="@+id/tv_info_title"
-        tools:layout_editor_absoluteX="29dp" />
-
-    <TextView
-        android:id="@+id/tv_fund_month"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:text="0,3%"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toEndOf="@+id/tv_month"
-        app:layout_constraintTop_toBottomOf="@+id/tv_fundo" />
-
-    <TextView
-        android:id="@+id/tv_cdi_month"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:text="0,3%"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.7"
-        app:layout_constraintStart_toEndOf="@+id/tv_fund_month"
-        app:layout_constraintTop_toBottomOf="@+id/tv_cdi" />
-
-    <TextView
-        android:id="@+id/tv_year"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="No Ano"
-        app:layout_constraintTop_toBottomOf="@+id/tv_month"
-        tools:layout_editor_absoluteX="29dp" />
-
-    <TextView
-        android:id="@+id/tv_fund_year"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="104dp"
-        android:text="13,01%"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.072"
-        app:layout_constraintStart_toEndOf="@+id/tv_year"
-        tools:layout_editor_absoluteY="556dp" />
-
-    <TextView
-        android:id="@+id/tv_cdi_year"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:text="12,08%"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.636"
-        app:layout_constraintStart_toEndOf="@+id/tv_fund_year"
-        app:layout_constraintTop_toBottomOf="@+id/tv_cdi_month" />
-
-    <TextView
-        android:id="@+id/tv_months"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
-        android:text="12 meses"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_year" />
-
-    <TextView
-        android:id="@+id/tv_fund_months"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="100dp"
-        android:text="17,9%"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
-        app:layout_constraintStart_toEndOf="@+id/tv_months"
-        tools:layout_editor_absoluteY="616dp" />
-
-    <TextView
-        android:id="@+id/tv_cdi_months"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
-        android:text="17,6%"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.628"
-        app:layout_constraintStart_toEndOf="@+id/tv_fund_months"
-        app:layout_constraintTop_toBottomOf="@+id/tv_cdi_year" />
 
     <TextView
         android:id="@+id/tv_balance"
@@ -392,88 +375,98 @@
         android:layout_marginStart="28dp"
         android:text="Saldo minimo"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="807dp" />
+        tools:layout_editor_absoluteY="807dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_value_balance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="28dp"
         android:text="R$ 5.000,00"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.915"
-        app:layout_constraintStart_toEndOf="@+id/tv_balance"
-        tools:layout_editor_absoluteY="809dp" />
+        tools:layout_editor_absoluteY="809dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_redemption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="28dp"
         android:text="Resgate (valor bruto)"
-        app:layout_constraintEnd_toStartOf="@+id/tv_redemption_final"
-        app:layout_constraintHorizontal_bias="0.103"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="848dp" />
+        tools:layout_editor_absoluteY="848dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_redemption_final"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="28dp"
         android:text="D+0"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="844dp" />
+        tools:layout_editor_absoluteY="844dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_quota"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
         android:text="Cota (valor bruto)"
         tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="889dp" />
+        tools:layout_editor_absoluteY="889dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_quota_final"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
         android:text="D+1"
-        tools:layout_editor_absoluteX="331dp"
-        tools:layout_editor_absoluteY="886dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="886dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_payment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
         android:text="Pagamento (valor bruto)"
         tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="927dp" />
+        tools:layout_editor_absoluteY="927dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_payment_final"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
         android:text="D+2"
-        tools:layout_editor_absoluteX="331dp"
-        tools:layout_editor_absoluteY="927dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="927dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_essential"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
         android:text="Essenciais"
         tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="965dp" />
+        tools:layout_editor_absoluteY="965dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_performance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Desempenho"
+        android:layout_marginStart="28dp"
         tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="1006dp" />
+        tools:layout_editor_absoluteY="1006dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_complementary"
@@ -481,68 +474,78 @@
         android:layout_height="wrap_content"
         android:text="Complementares"
         tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="1044dp" />
+        tools:layout_editor_absoluteY="1044dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_regulation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Regulamento"
+        android:layout_marginStart="28dp"
         tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="1080dp" />
+        tools:layout_editor_absoluteY="1080dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_accession"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="28dp"
         android:text="Adesão"
-        app:layout_constraintEnd_toStartOf="@+id/tv_down_05"
-        app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="1117dp" />
+        tools:layout_editor_absoluteY="1117dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_down_01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
         android:text="Baixar"
-        tools:layout_editor_absoluteX="320dp"
-        tools:layout_editor_absoluteY="965dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="965dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_down_02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
         android:text="Baixar"
-        tools:layout_editor_absoluteX="320dp"
-        tools:layout_editor_absoluteY="1006dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="1006dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_down_03"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
         android:text="Baixar"
-        tools:layout_editor_absoluteX="320dp"
-        tools:layout_editor_absoluteY="1044dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="1084dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_down_04"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
         android:text="Baixar"
-        tools:layout_editor_absoluteX="320dp"
-        tools:layout_editor_absoluteY="1084dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="1045dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_down_05"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="28dp"
         android:text="Baixar"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="1118dp" />
+        tools:layout_editor_absoluteY="1117dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/invest_btn"
